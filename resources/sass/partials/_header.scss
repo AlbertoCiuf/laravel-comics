@@ -1,0 +1,34 @@
+header {
+  height: 120px;
+  
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 85%;
+    }
+  }
+
+  ul {
+    display: flex;
+    li {
+      padding: 0 15px;
+      a {
+        line-height: 117px; //altezza dell'header - dimensione del border
+        text-transform: uppercase;
+        color: #454545;
+        font-weight: 700;
+      }
+    }
+    li.active a, li:hover a{
+    color: #2582FA;
+    }
+    li.active, li:hover {
+      border-bottom: 3px solid #2582FA;
+    }
+
+  }
+}

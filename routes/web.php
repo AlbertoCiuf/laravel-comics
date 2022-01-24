@@ -14,5 +14,57 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+  $links = [
+    [
+      "url" =>'#',
+      "text" =>'characters',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'comics',
+      "isActive" => true
+    ],
+    [
+      "url" =>'#',
+      "text" =>'movies',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'tv',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'games',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'collectibles',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'videos',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'fans',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'news',
+      "isActive" => false
+    ],
+    [
+      "url" =>'#',
+      "text" =>'shop',
+      "isActive" => false
+    ],
+  ];
+    return view('home', compact('links'));
+})->name('home');
